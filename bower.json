@@ -1,0 +1,18 @@
+{
+  "name": "react",
+  "version": "0.0.1",
+  "homepage": "https://github.com/adammartin1981/react",
+  "authors": [
+    "Adam Martin <adammartin1981@hotmail.co.uk>"
+  ],
+  "description": "Demo area of React",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
