@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Demo test for React</title>
+        <link rel='stylesheet' type='text/css' href='vendor.css' />
+        <script src='vendor.js'></script>
+    </head>
+    <body>
+        <h1>Lets show what react can do</h1>
+        <div id='example'></div>
+
+        Lets make the JSX stuff to be external
+
+        <script type="text/jsx">
+
+          /** @jsx React.DOM */
+
+          var MyComponent = React.createClass({
+            handleClick: function() {
+              // Explicitly focus the text input using the raw DOM API.
+              this.refs.myTextInput.getDOMNode().focus();
+            },
+            render: function() {
+              // The ref attribute adds a reference to the component to
+              // this.refs when the component is mounted.
+              return (
+                <div>
+                  <input type="text" ref="myTextInput" />
+                  <input
+                    type="button"
+                    class="btn"
+                    value="Focus the text input"
+                    onClick={this.handleClick}
+                  />
+                </div>
+              );
+            }
+          });
+
+
+          React.renderComponent(
+            <MyComponent />,
+            document.getElementById('example')
+          );
+        </script>
+
+
+    </body>
+</html>
